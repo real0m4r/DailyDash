@@ -13,7 +13,7 @@
             text-align: center;
             padding: 20px;
             border-radius: 20px;
-            background-color: rgba(154, 154, 154, 0.397);
+            background-color: rgba(154, 154, 154, 0.650);
             margin: 10% 10% 20% 10%;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -22,6 +22,7 @@
             padding-left: 50px;
             padding-right: 50px;
             max-width: 80%;
+            opacity: 1;
         }
         .search-container {
             margin-top: 20px;
@@ -63,6 +64,7 @@
     position: sticky;
     top: 0;
     padding: 0 20px;
+    z-index: 1000;
 }
 .header-main-logo {
     display: flex;

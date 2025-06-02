@@ -39,6 +39,48 @@
                 <div class="burger-menu-btn"></div>
             </div>
         </header>
+          <header class="new-header">
+    <div class="logo">LATEST NEWS</div>
+    <button id="toggle-dark" class="toggle">🌓</button>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="search" placeholder="Search news..." />
+    
+    <select id="category">
+      <option value="">All</option>
+      <option value="technology">Technology</option>
+      <option value="sports">Sports</option>
+      <option value="politics">Politics</option>
+      <option value="business">Business</option>
+      <option value="health">Health</option>
+      <option value="science">Science</option>
+      <option value="entertainment">Entertainment</option>
+    </select>
+
+    <select id="country">
+      <option value="us">🇺🇸 US</option>
+      <option value="gb">🇬🇧 UK</option>
+      <option value="ca">🇨🇦 Canada</option>
+      <option value="au">🇦🇺 Australia</option>
+      <option value="in">🇮🇳 India</option>
+    </select>
+
+    <select id="language">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="es">Español</option>
+    </select>
+
+    <button id="sort-date">🕒 Sort: Newest</button>
+  </section>
+
+  <main id="news" class="news-container"></main>
+  <div class="load-more-wrapper">
+    <button id="load-more">Load More</button>
+  </div>
+
         <footer>
             <div class="footer-container">
 
@@ -57,47 +99,7 @@
             </div>
         </footer>
         <script src="main.js"></script>
-        <script src="https://web3forms.com/client/script.js" async defer></script>
-        <script>
-            window.onload = function() {
-                document.getElementById("form").reset();
-            };
-        </script>
-        <script>
-            const form = document.getElementById('form');
-            
-            form.addEventListener('submit', function(e) {
-            
-                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-            
-                if (!hCaptcha) {
-                    e.preventDefault();
-                    alert("Please fill out captcha field")
-                    return
-                }
-            });
-        </script>
-        <script>
-            document.getElementById("form").addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent default form submission
-            
-                const formData = new FormData(this); // Get form data
-            
-                fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(result => {
-                    if (result.success) {
-                        alert("Form submitted successfully! Redirecting...");
-                        window.location.href = "emailsent.html"; // Custom redirect
-                    } else {
-                        alert("Error: " + result.message); // Show error if any
-                    }
-                })
-                .catch(error => console.error("Error submitting form:", error));
-            });
-            </script>
+        <script src="news.js" async defer></script>
+        
     </body>
 </html>

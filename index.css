@@ -6,7 +6,6 @@ body {
     margin: 0;
     font-family: Montserrat;
     height: 100%;
-    background-image: url(payam-moin-afshari-OZlYWa0tyIQ-unsplash.jpg);
 }
 
 h1 {
@@ -34,7 +33,7 @@ main {
     box-sizing: border-box;
     margin-top: 60px;
     margin-bottom: 20%;
-    color: #FF3B30;
+    color: #FFF;
 }
 
 .main-intro {
@@ -43,12 +42,11 @@ main {
     gap: 40px;
     max-width: 1200px;
     width: 100%;
-    color: #FF3B30;
+    color: #FFF;
 }
 
 .main-intro img {
-    max-width: 600px;
-    height: auto;
+    height: 60%;
     order: 2; /* Move image to the right */
 }
 
@@ -61,7 +59,6 @@ main {
     line-height: 75px;
     color: #fff;
     margin: 0;
-    color: #FF3B30;
 }
 
 .main-intro p {
@@ -70,7 +67,6 @@ main {
     color: #fff;
     max-width: 400px;
     margin: 20px 0;
-    color: #FF3B30;
     font-style:italic;
     font-weight: 900;
 }

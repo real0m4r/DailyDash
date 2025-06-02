@@ -18,7 +18,7 @@ body {
     left: 0;
     right: 0;
     padding: 0 20px;
-    z-index: 1000;
+    z-index: 2000;
 }
 .header-main-logo {
     display: flex;
@@ -127,6 +127,119 @@ footer {
 .burger-menu {
     display: none;
 }
+ :root {
+  --bg: #f2f2f2;
+  --text: #111;
+  --card: #fff;
+  --accent: #cc0000;
+  --border: #ddd;
+}
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card: #1e1e1e;
+  --accent: #ff4444;
+  --border: #333;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+header {
+  background: var(--accent);
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  background: white;
+  color: var(--accent);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+.controls input,
+.controls select,
+.controls button {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.news-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.news-item {
+  background: var(--card);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.news-image {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.news-content {
+  flex: 1;
+}
+.news-content a {
+  color: var(--text);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+.news-content a:hover {
+  color: var(--accent);
+}
+.source {
+  color: gray;
+  margin-top: 8px;
+  font-size: 0.9em;
+}
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+#load-more {
+  padding: 10px 20px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.logo {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+.new-header {
+    position: sticky;
+    z-index: 1000;
+    display: flex;
+}
 @media only screen and (max-width: 600px) {
     .burger-menu-btn {
         display: block;
@@ -178,7 +291,7 @@ footer {
     .header-main {
         position: sticky;
         top: 0;
-        z-index: 1000;
+        z-index: 2000;
     }
 
     .header-main-logo {
@@ -205,4 +318,13 @@ footer {
         text-align: center;
         margin: 10px 0px;
     }
+}
+@media (max-width: 700px) {
+  .news-item {
+    flex-direction: column;
+  }
+  .news-image {
+    width: 100%;
+    height: auto;
+  }
 }
