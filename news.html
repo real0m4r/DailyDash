@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>News</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="stylesheet" href="news.css">
+        <link rel="icon" href="logo.png" type="image/x-icon" style="border-radius: 20px;">
+        <script src="https://kit.fontawesome.com/195f487cc3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+            <!--Burger menu start-->
+            <nav class="burger-menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Weather.html">WEATHER</a></li>
+                    <li><a href="clock.html">WORLD CLOCK</a></li>  
+                    <li><a href="news.html">NEWS</a></li>
+                </ul>
+            </nav>
+            <!--Burger menu end-->
+        <header class="header-main">
+            <div class="header-main-logo">
+                <a href="index.html"><img src="logo.png" alt="Logo" style="height: 50px;"></a>
+                <nav class="header-main-nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li class="slash-nav">|</li> 
+                        <li><a href="Weather.html">WEATHER</a></li>
+                        <li class="slash-nav">|</li>
+                        <li><a href="clock.html">WORLD CLOCK</a></li>
+                        <li class="slash-nav">|</li>
+                        <li><a href="news.html">NEWS</a></li>
+                        
+                    </ul>
+                </nav>
+                <div class="burger-menu-btn"></div>
+            </div>
+        </header>
+        <footer>
+            <div class="footer-container">
+
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Weather.html">Weather </a></li>
+                        <li><a href="clock.html">World Clock</a></li>
+                        <li><a href="news.html">News</a></li>
+                                            
+                    </ul>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2025; Designed by<br><span class="designer">Omar Taha</span></p>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+        <script>
+            window.onload = function() {
+                document.getElementById("form").reset();
+            };
+        </script>
+        <script>
+            const form = document.getElementById('form');
+            
+            form.addEventListener('submit', function(e) {
+            
+                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+            
+                if (!hCaptcha) {
+                    e.preventDefault();
+                    alert("Please fill out captcha field")
+                    return
+                }
+            });
+        </script>
+        <script>
+            document.getElementById("form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+            
+                const formData = new FormData(this); // Get form data
+            
+                fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        alert("Form submitted successfully! Redirecting...");
+                        window.location.href = "emailsent.html"; // Custom redirect
+                    } else {
+                        alert("Error: " + result.message); // Show error if any
+                    }
+                })
+                .catch(error => console.error("Error submitting form:", error));
+            });
+            </script>
+    </body>
+</html>

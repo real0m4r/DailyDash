@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Clock</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="stylesheet" href="clock.css">
+        <link rel="icon" href="logo.png" type="image/x-icon" style="border-radius: 20px;">
+        <script src="https://kit.fontawesome.com/195f487cc3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+  <!--Burger menu start-->
+        <nav class="burger-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Weather.html">WEATHER</a></li>
+                <li><a href="clock.html">WORLD CLOCK</a></li>  
+                <li><a href="news.html">NEWS</a></li>
+            </ul>
+        </nav>
+        <!--Burger menu end-->
+        <header class="header-main">
+            <div class="header-main-logo">
+                <a href="index.html"><img src="logo.png" alt="Logo" style="height: 50px;"></a>
+                <nav class="header-main-nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li class="slash-nav">|</li>
+                        <li><a href="Weather.html">WEATHER</a></li>
+                        <li class="slash-nav">|</li>
+                        <li><a href="clock.html">WORLD CLOCK</a></li>
+                        <li class="slash-nav">|</li>  
+                        <li><a href="news.html">NEWS</a></li>
+                        
+                    </ul>
+                </nav>
+                <div class="burger-menu-btn"></div>
+            </div>
+        </header>
+
+        <html lang="en">
+
+        <div class="clock-container">
+            <h1>World Clock</h1>
+            <div class="input-group">
+            <div class="input-wrapper">
+            <input type="text" id="searchInput" placeholder="Search timezone (e.g. Europe/London)">
+            <div id="suggestions"></div>
+            </div>
+            </div>
+            <div id="result"></div>
+        </div>
+
+        <script src="clock.js"></script>
+
+
+
+        <footer>
+            <div class="footer-container">
+
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Weather.html">Weather </a></li>
+                        <li><a href="clock.html">World Clock</a></li>
+                        <li><a href="news.html">News</a></li>      
+                    </ul>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2025; Designed by<br><span class="designer">Omar Taha</span></p>
+            </div>
+        </footer>
+        <script src="main.js" async defer></script>
+    </body>
+</html>
