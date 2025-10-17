@@ -1,4 +1,4 @@
-const API_KEY = '89cf723db07ee97ee7cfe8d6efb173eb';
+const API_KEY = 'f3c2e4446de43b87920f6594342e5133';
 const newsContainer = document.getElementById('news');
 let page = 1;
 let currentQuery = '';
